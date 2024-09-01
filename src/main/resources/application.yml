@@ -1,0 +1,25 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: attendance
+  datasource:
+    username: root
+    password: root
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:2700/mis?useLegacyDatetimeCode=false&serverTimezone=Asia/Jakarta
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+integration:
+  datasource:
+    db-mis-stage:
+      username: root
+      password: root
+      driverClassName: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://localhost:2600/mis_stage?useLegacyDatetimeCode=false&serverTimezone=Asia/Jakarta
+
+  jpa:
+    hibernate:
+      ddl-auto: update
